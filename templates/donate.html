@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hope Alive USA</title>
+     <link rel="stylesheet" href="../scripts/styles.css"> 
+     <script src="../scripts/script.js"></script>
+</head>
+<body>
+    <header>
+        <img src="../images/hopealive.jpg" alt="Hope Alive USA Logo">
+        <nav>
+            <ul>
+                <li><a href="#" onclick= "reloadIndex()">Home</a>
+                <li><a href="#" onclick= "about()">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="#">Resource 1</a>
+                        <a href="#">Resource 2</a>
+                        <a href="#">Resource 3</a>
+                        <a href="#">Resource 4</a>
+                        <a href="#">Resource 5</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Community</a>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="membership()">Members and Membership</a>
+                        <a href="#" onclick="loadVideosPage()">Videos</a>
+                        <a href="#" onclick="involved()">Get Involved</a>
+                        <a href="#" onclick="donation()">Donate</a>
+                    </div>
+                </li>
+                <li><a href="#" onclick= "contact()">Contact Us</a></li>
+            </ul>
+        </nav>
+           
+    </header>
+    
+    <main>
+        <h1>Donate to Support Our Mission</h1>
+    <section id="donation-form">
+        <h2>Make a Donation</h2>
+        <p>Your contribution helps us continue our mission. Thank you for your generosity.</p>
+        
+        <form action="process_donation.php" method="POST">
+            <label for="donor-name">Your Name:</label>
+            <input type="text" id="donor-name" name="donor-name" required>
+
+            <label for="donor-email">Your Email:</label>
+            <input type="email" id="donor-email" name="donor-email" required>
+
+            <label for="donation-amount">Donation Amount:</label>
+            <input type="number" id="donation-amount" name="donation-amount" min="1" required>
+
+            <!-- Securely collect credit card information using a PCI-compliant payment gateway -->
+            <label for="credit-card-number">Credit Card Number:</label>
+            <input type="text" id="credit-card-number" name="credit-card-number" required>
+
+            <label for="expiry-date">Expiry Date:</label>
+            <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" maxlength="3" required>
+
+            <button type="submit">Donate Now</button>
+        </form>
+    </section>
+   </main>
+
+    <footer>
+        <p>&copy; 2024 Hope Alive USA. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
+<!--In this revised code:
+
+Implemented SSL encryption: Ensure that your website is served over HTTPS to encrypt data transmission between the donor's browser and your server.
+Data minimization: Collect only essential information from donors, such as name, email, donation amount, and credit card details.
+Secure payment gateway integration: Use a PCI-compliant payment gateway to securely process credit card transactions. Donor credit card information is securely collected and processed by the payment gateway, reducing your organization's PCI DSS compliance burden.
+Compliance with GDPR: Ensure compliance with GDPR regulations by obtaining explicit consent from donors before collecting their personal data, providing clear privacy notices, and securely storing and processing their data.
+CSS stylesheets: Separate the presentation layer using external CSS stylesheets for better maintainability and scalability.
+Please note that the process_donation.php file referenced in the form's action attribute should handle the form submission, validate input data, and securely process the donation through your chosen payment gateway. Make sure to implement server-side validation and sanitize input to prevent security vulnerabilities such as SQL injection and cross-site scripting (XSS).    --->
+

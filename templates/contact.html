@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Hope Alive USA</title>
+     <link rel="stylesheet" href="../scripts/styles.css"> 
+     <script src="../scripts/script.js"></script>
+</head>
+<body>
+    <header>
+        <img src="../images/hopealive.jpg" alt="Hope Alive USA Logo">
+        <nav>
+            <ul>
+                <li><a href="#" onclick= "reloadIndex()">Home</a>
+                <li><a href="#" onclick= "about()">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="#">Resource 1</a>
+                        <a href="#">Resource 2</a>
+                        <a href="#">Resource 3</a>
+                        <a href="#">Resource 4</a>
+                        <a href="#">Resource 5</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Community</a>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="membership()">Members and Membership</a>
+                        <a href="#" onclick="loadVideosPage()">Videos</a>
+                        <a href="#" onclick="involved()">Get Involved</a>
+                        <a href="#" onclick="donation()">Donate</a>
+                    </div>
+                </li>
+                <li><a href="#" onclick= "contact()">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+     <h2>We'd love to hear from you. Please fill out the form below.</h2>
+    <section id="contact-form">
+        <h2>Send us a Message</h2>
+        <form action="submit_contact_form.php" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hope Alive USA. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+   
