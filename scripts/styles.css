@@ -1,0 +1,473 @@
+
+        /* Global styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            min-height: 150vh; /* Set minimum height of the body to full viewport height */
+            position: relative; /* Set body position to relative */
+        }
+        /* Media query for smaller screens */
+        @media screen and (max-width: 600px) {
+            header {
+                flex-direction: column; /* Change direction to column */
+                align-items: center; /* Center align items */
+            }
+            nav ul {
+                flex-direction: column; /* Change direction to column */
+                align-items: center; /* Center align items */
+                margin-top: 10px; /* Adjust margin for spacing */
+            }
+            nav ul li {
+                margin: 10px 0; /* Adjust margin for vertical spacing */
+            }
+            nav ul {
+                flex-wrap: wrap; /* Allow flex items to wrap */
+            }
+        }
+        
+        header {
+            background-color: #337;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header img {
+            width: 200px; /* Adjust as needed */
+            height: auto;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap; /* Allow flex items to wrap */
+        }
+        nav ul li {
+            margin-right: 110px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            color: deeppink;
+        }
+       
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .content div {
+            width: 30%;
+            margin: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .content div:hover {
+            transform: scale(1.1);
+        }
+
+
+
+/* Style for the container holding the membership forms */
+.video-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows wrapping to next line if necessary */
+}
+
+/* Style for the membership forms */
+.video-form {
+    width: calc(30% - 20px); /* Adjust the width as needed */
+    margin-bottom: 20px; /* Adjust margin between forms */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.video-form:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+.video-form h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.video-form p {
+    font-size: 1em;
+}
+
+/* Style for the hover content */
+.video-form .hover-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.video-form:hover .hover-content {
+    display: block;
+}
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+    .video-form {
+        width: calc(50% - 20px); /* Adjust width for smaller screens */
+    }
+}
+
+/* Adjust video size */
+.video-form video {
+    max-width: 100%; /* Video will never exceed the width of its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+       
+    /* styles for donate.html */
+      /* CSS for center-aligning content within sections */
+        section {
+            text-align: center;
+            margin: 0 auto;
+            max-width: 600px; /* Adjust as needed */
+        }
+        
+        section h2 {
+            margin-top: 20px;
+        }
+        
+        section p {
+            margin-bottom: 20px;
+        }
+        
+        section form {
+            margin-top: 20px;
+            background-color: seagreen;
+            border: 3px;
+        }
+        
+        /* CSS for sticky footer */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+
+       
+    
+
+    /*  styles for about us */
+    /* Define individual colors for each sub-section */
+    h2:nth-of-type(1) {
+        color: #FF4136;
+    }
+
+    h2:nth-of-type(2) {
+        color: #0074D9;
+    }
+
+    h2:nth-of-type(3) {
+        color: #FF851B;
+    }
+
+    h2:nth-of-type(4) {
+        color: #2ECC40;
+    }
+
+    h2:nth-of-type(5) {
+        color: #B10DC9;
+    }
+
+    /* Add hover and expand effect to each sub-section */
+    .container > * {
+        transition: all 0.3s ease;
+        width: 80%;
+        margin-left: 5%;
+        margin-right: 5%;
+        background-color: #f2f2f2;
+        padding: 10px;
+    }
+
+    .container > *:hover {
+        transform: scale(1.1);
+    }
+
+    /* Style the team-member section */
+    .team-member {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem;
+        border: 2px solid black;
+        width: 80%;
+        margin-left: 5%;
+        margin-right: 5%;
+        background-color: #f2f2f2;
+        padding: 10px;
+    }
+
+    .team-member img {
+        max-width: 100%;
+    }
+
+    .team-member h3 {
+        margin: 0.5rem 0;
+    }
+
+    .team-member p {
+        margin: 0;
+    }
+
+    /* Add hover effect to team-member section */
+    .team-member img {
+        transition: all 0.3s ease;
+    }
+
+    .team-member img:hover {
+        transform: scale(1.1);
+    }
+
+    form {
+        border: 2px solid black;
+        width: 80%;
+        margin-left: 5%;
+        margin-right: 5%;
+        background-color: #f2f2f2;
+        padding: 10px;
+    }
+
+     
+/* CSS styles for the donation form */
+
+/* Form container */
+#donation-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form title */
+#donation-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: orangered;
+}
+
+/* Form labels */
+#donation-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Form input fields */
+#donation-form input[type="text"],
+#donation-form input[type="email"],
+#donation-form input[type="number"],
+#donation-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Form submit button */
+#donation-form button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#donation-form button:hover {
+    background-color: #0056b3;
+}
+
+
+/* CSS styles for the contact form */
+
+/* Form container */
+#contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 05, 0, 0.1);
+}
+
+/* Form title */
+#contact-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: orangered;
+}
+
+/* Form labels */
+#contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Form input fields */
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Form submit button */
+#contact-form button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+/* Style for the container holding the membership forms */
+.membership-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows wrapping to next line if necessary */
+}
+
+/* Style for the membership forms */
+.membership-form {
+    width: calc(30% - 20px); /* Adjust the width as needed */
+    margin-bottom: 20px; /* Adjust margin between forms */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.membership-form:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+.membership-form h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.membership-form p {
+    font-size: 1em;
+}
+
+/* Style for the hover content */
+.membership-form .hover-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.membership-form:hover .hover-content {
+    display: block;
+}
+
+footer {
+    margin-top: auto; /* Push the footer to the bottom */
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    position: relative;
+    height: 200px;
+    width: 100%;
+    flex-shrink: 0; /* Ensure footer does not shrink */
+}
+
+.footer-members {
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 100; /* Ensure the footer is above other content */
+}
